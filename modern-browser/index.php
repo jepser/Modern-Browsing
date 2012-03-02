@@ -37,9 +37,12 @@ class modern_browse {
     	<?php settings_fields( 'mb_settings' ); ?>
 		<?php do_settings_fields('modern-browsing', 'mb_settings' ); ?>
         <?php
-        	$ie = array('6' => '6+', '7' => '7+', '8' => '8+');
-			$safari = array('3' => '3+', '4' => '4+', '5' => '5+', '5.1' => '5.1+');
-			$mozilla = array('3' => '3+', '4' => '4+', '5' => '5+', '6' => '6+', '7' => '7+', '8' => '8+', '9' => '9+', '10' => '10+');
+			$browser_list = array(
+				'Internet Explorer' => array('6' => '6+', '7' => '7+', '8' => '8+','9'=> '9+'),
+				'Safari' => array('3' => '3+', '4' => '4+', '5' => '5+', '5.1' => '5.1+'),
+				'Firefox' => array('3' => '3+', '4' => '4+', '5' => '5+', '6' => '6+', '7' => '7+', '8' => '8+', '9' => '9+', '10' => '10+', '11' => '11+'),
+				'Opera' => array('8' => '8+', '9' => '9+', '10' => '10+', '11' => '11+')
+			);
 		?>
         <table class="form-table">
             <tr valign="top">
@@ -51,38 +54,21 @@ class modern_browse {
             </tr>
         </table>     
         <h3><?php _e('Select browser compatility','mb'); ?></h3>
-        <pre><?php //print_r(get_option('browser')); ?></pre>
-        <?php $browser = get_option('browser'); ?>
+        <?php $browser_option = get_option('browser'); ?>
         <table class="form-table">
+        	<?php foreach($browser_list as $name => $versions) { ?>
+            <?php $browser_id = str_replace(' ', '-', strtolower($name)); ?>
         	<tr valign="top">
-            <th scope="row"><?php _e('Internet Explorer','mb'); ?></th>
+            <th scope="row"><?php echo $name; ?></th>
             <td>
-                <select name="browser[ie]">
-                <?php foreach($ie as $k => $v) { ?>
-					<option value="<?php echo $k ?>"<?php echo ($k == $browser['ie']) ? ' selected="selected"' : ''; ?>><?php echo $v; ?></option>
+                <select name="browser[<?php echo $browser_id;  ?>]">
+                <?php foreach($versions as $k => $v) { ?>
+					<option value="<?php echo $k; ?>"<?php echo ($k == $browser_option[$browser_id]) ? ' selected="selected"' : ''; ?>><?php echo $v; ?></option>
 				<?php } ?>
                 </select>
             </td>
             </tr>
-            <tr valign="top">
-            <th scope="row"><?php _e('Mozilla','mb'); ?></th>
-            <td>
-                <select name="browser[mozilla]">
-                <?php foreach($mozilla as $k => $v) { ?>
-					<option value="<?php echo $k ?>"<?php echo ($k == $browser['mozilla']) ? ' selected="selected"' : ''; ?>><?php echo $v; ?></option>
-				<?php } ?>
-                </select>
-            </td>
-            </tr>
-             <th scope="row"><?php _e('Safari','mb'); ?></th>
-            <td>
-                <select name="browser[safari]">
-                <?php foreach($safari as $k => $v) { ?>
-					<option value="<?php echo $k ?>"<?php echo ($k == $browser['safari']) ? ' selected="selected"' : ''; ?>><?php echo $v; ?></option>
-				<?php } ?>
-                </select>
-            </td>
-            </tr>
+            <?php } ?>
         </table>
         
         <p class="submit">
@@ -131,7 +117,7 @@ class modern_browse {
 		
 		
 ?>
-<?php if(get_option('shiv')) { ?>
+<?php if(get_option('shiv') == 'on') { ?>
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
@@ -147,10 +133,7 @@ jQuery(function($){
 		$(this).toggleClass('opened');
 		return false;
 	});
-	var cb = $.browser;
-	var ie = '<?php echo $browser_option['ie']; ?>';
-	var safari = '<?php echo $browser_option['safari']; ?>';
-	var mozilla = '<?php echo $browser_option['mozilla']; ?>';
+	var browser;
 	
 	var text = '<?php echo $message; ?>';
 	var content = '<?php echo $content; ?>';
@@ -160,24 +143,15 @@ jQuery(function($){
 	function constructor(browserName, version){
 		$('body').prepend('<div class="mb_toolbar ' + browserName + '"><div class="mb_wrap"><div class="mb_content">' + content  + icons + '</div><div class="mb_handle">' + text + '</div></div></div>');
 	}
-	//console.log(cb);
-	/*if(cb.webkit < safari){
-		console.log(cb.version);
-		constructor('Safari', cb.version);
-	}*/
-	/*else if(cb.mozilla < mozilla){*/
-		//console.log(cb.version);
-		constructor(currentBrowser, cb.version);
-	//}
-	/*else if(cb.msie < ie){
-		constructor('Internet Explorer', cb.version);
-	}*/
+	<?php if(intval($browser_option[$current_browser_item]) > $browser->getVersion() ) { ?>
+	constructor(currentBrowser, '<?php $browser->getVersion() ?>');
+	<?php } ?>
 	
 });
 </script>	
 	<?php 
-		}
-	}
+		} //admin
+	} //show_bar
 }
 add_action('wp_enqueue_scripts', array('modern_browse', 'javascript_init'));
 add_action('admin_menu', array('modern_browse', 'create_menu'));
