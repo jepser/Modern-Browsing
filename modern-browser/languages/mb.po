@@ -1,0 +1,99 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Text in function
+#: index.php:93
+msgid " For a better experience in this web site "
+msgstr ""
+
+#. Text in function
+#: index.php:93
+msgid "<div class=\"mb_title\"><h3>Your browser is obsolete!</h3></div><div class=\"mb_message\"><p>This site was developed under the lastest web standards, and to check all cool features made for you, it is important to update your browser</p><p>With an updated browser, you can:</p></div>"
+msgstr ""
+
+#. Text in echo
+#: index.php:49
+msgid "Add HTML5 Shiv"
+msgstr ""
+
+#. Text in echo
+#: index.php:46
+msgid "Bar Hiding"
+msgstr ""
+
+#. Text in echo
+#: index.php:47
+msgid "Enable user bar remove"
+msgstr ""
+
+#. Text in echo
+#: index.php:50
+msgid "HTML5 support for IE"
+msgstr ""
+
+#. Text in echo
+#: index.php:58
+msgid "Internet Explorer"
+msgstr ""
+
+#. Text in echo
+#: index.php:35
+msgid "Modern Browsing Options"
+msgstr ""
+
+#. Text in function
+#: index.php:93
+msgid "More information"
+msgstr ""
+
+#. Text in function
+#: index.php:93
+msgid "More speed and performance"
+msgstr ""
+
+#. Text in echo
+#: index.php:68
+msgid "Mozilla"
+msgstr ""
+
+#. Text in echo
+#: index.php:77
+msgid "Safari"
+msgstr ""
+
+#. Text in function
+#: index.php:93
+msgid "Security"
+msgstr ""
+
+#. Text in echo
+#: index.php:53
+msgid "Select browser compatility"
+msgstr ""
+
+#. Text in function
+#: index.php:93
+msgid "Support for the latest technologies"
+msgstr ""
+
+#. Text in function
+#: index.php:93
+msgid "Update your browser"
+msgstr ""
+
+#. Text in function
+#: index.php:93
+msgid "You are using an obsolete version of "
+msgstr ""
+
+#. Text in function
+#: index.php:93
+msgid "Your version"
+msgstr ""
+
+#. Text in function
+#: index.php:93
+msgid "because this and much more benefits..."
+msgstr ""
