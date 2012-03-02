@@ -1,0 +1,106 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Jepser <jepsersk8@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Text in function
+#: index.php:93
+msgid " For a better experience in this web site "
+msgstr " Para una mejor experiencia en este sitio web."
+
+#. Text in function
+#: index.php:93
+msgid "<div class=\"mb_title\"><h3>Your browser is obsolete!</h3></div><div class=\"mb_message\"><p>This site was developed under the lastest web standards, and to check all cool features made for you, it is important to update your browser</p><p>With an updated browser, you can:</p></div>"
+msgstr "<div class=\"mb_title\"><h3>¡Tu navegador es obsoleto!</h3></div><div class=\"mb_message\"><p>Este sitio web fue diseñado bajo los últimos estándares web, y para poder apreciar todo lo que hemos preparado para tí, es importante que actualices tu navegador.</p><p>Con un navegador actualizado, gozas de ventajas como:</p></div>"
+
+#. Text in echo
+#: index.php:49
+msgid "Add HTML5 Shiv"
+msgstr "Agregar HTML5 Shiv"
+
+#. Text in echo
+#: index.php:46
+msgid "Bar Hiding"
+msgstr "Ocultar barra"
+
+#. Text in echo
+#: index.php:47
+msgid "Enable user bar remove"
+msgstr "Habilitar que el usuario pueda esconder la barra"
+
+#. Text in echo
+#: index.php:50
+msgid "HTML5 support for IE"
+msgstr "Suporte de HTML5 en IE"
+
+#. Text in echo
+#: index.php:58
+msgid "Internet Explorer"
+msgstr "Internet Explorer"
+
+#. Text in echo
+#: index.php:35
+msgid "Modern Browsing Options"
+msgstr "Configuración de Modern Browsing"
+
+#. Text in function
+#: index.php:93
+msgid "More information"
+msgstr "Más información"
+
+#. Text in function
+#: index.php:93
+msgid "More speed and performance"
+msgstr "Más rápido y mejor desempeño"
+
+#. Text in echo
+#: index.php:68
+msgid "Mozilla"
+msgstr "Mozilla"
+
+#. Text in echo
+#: index.php:77
+msgid "Safari"
+msgstr "Safari"
+
+#. Text in function
+#: index.php:93
+msgid "Security"
+msgstr "Seguridad"
+
+#. Text in echo
+#: index.php:53
+msgid "Select browser compatility"
+msgstr "Selecciona la compatibilidad de los navegadores"
+
+#. Text in function
+#: index.php:93
+msgid "Support for the latest technologies"
+msgstr "Soporta las últimas tecnologías"
+
+#. Text in function
+#: index.php:93
+msgid "Update your browser"
+msgstr "Actualiza tu navegador"
+
+#. Text in function
+#: index.php:93
+msgid "You are using an obsolete version of "
+msgstr "Estás utilizando una versión obsoleta de "
+
+#. Text in function
+#: index.php:93
+msgid "Your version"
+msgstr "Tu versión"
+
+#. Text in function
+#: index.php:93
+msgid "because this and much more benefits..."
+msgstr "Por esto y muchos más beneficios"
+

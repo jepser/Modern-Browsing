@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* CSS Document */
+
+.mb_toolbar{
+	font:12px Helvetica, Arial, sans-serif;
+	box-shadow:0 0 10px #333;
+	width:100%;
+	position:fixed;
+	left:0;
+	top:-170px;
+	background:url(images/bg-points.png) no-repeat center top;
+}
+	.mb_toolbar.firefox{
+		background-color:#E29808;
+	}
+	.mb_toolbar.internet-explorer{
+		background-color:#29ABE2;
+	}
+	.mb_toolbar.safari{
+		background-color:#E6E6E6;
+	}
+	.mb_toolbar.opera{
+		background-color:#C1272D;
+	}
+	.mb_toolbar .mb_content{
+		height:170px;
+		overflow:hidden;
+		position:relative;
+	}
+	.mb_toolbar .mb_wrap{
+		width:960px;
+		margin:0 auto;
+		overflow:hidden;
+		color:#FFF;
+	}
+		.mb_toolbar.safari .mb_wrap{
+			color:#000;
+		}
+	.mb_content .mb_title{
+		border-bottom:1px solid #FFF;
+		margin:0;
+	}
+	.mb_toolbar .mb_handle{
+		height:23px;
+		background:url(images/mini-browser-sprites.png) no-repeat left top;
+		padding:5px 0 0 30px;
+	}
+		.firefox .mb_handle{
+			background-position:left top;
+		}
+		.safari .mb_handle{
+			background-position:left -28px;
+		}
+		.opera .mb_handle{
+			background-position:left -56px;
+		}
+		.internet-explorer .mb_handle{
+			background-position:left bottom;
+		}
+		.mb_handle a{
+			text-decoration:none;
+			color:#FFF;
+			font-size:10px;
+			text-transform:uppercase;
+		}
+		.safari .mb_handle a{
+			color:#000;
+		}
+		.mb_handle .mb_button{
+			margin:0 10px;
+		}
+		.mb_handle .mb_mi{
+			float:right;
+			display:inline;
+			background:url(images/open-close.png) no-repeat right -5px;
+			padding:0 10px 0 0;
+			padding:2px 20px 2px 0;
+		}
+			.mb_handle .mb_mi.opened{
+				background-position:right -33px;
+			}
+	.mb_message{
+		width:320px;
+		float:left;
+		display:inline;
+	}
+	.mb_icon{
+		color:#FFF;
+		text-transform:uppercase;
+		text-align:center;
+		font-size:10px;
+		position:absolute;
+		background:url(images/support-sprites.png) no-repeat;
+	}
+		.mb_icon.speed{
+			background-position:center top;
+			padding:60px 0 0;
+			width:85px;
+			top:60px;
+			left:370px;
+		}
+		.mb_icon.security{
+			background-position:center -105px;
+			padding:60px 0 0;
+			width:60px;
+			top:50px;
+			left:500px;
+		}
+		.mb_icon.support{
+			background-position:center -210px;
+			padding:65px 0 0;
+			width:120px;
+			right:230px;
+			top:50px;
+		}
+		.mb_icon.more{
+			background:url(images/browser-sprites.png) no-repeat center top;
+			font-family:Georgia, "Times New Roman", Times, serif;
+			text-transform:none;
+			font-style:italic;
+			font-size:14px;
+			width:110px;
+			top:5px;
+			right:0;
+			padding:100px 0 0;
+		}
+			.internet-explorer .mb_icon.more{
+				background-position:center -160px;
+			}
+			.opera .mb_icon.more{
+				background-position:center -480px;
+			}
+			.safari .mb_icon.more{
+				background-position:center -320px;
+			}
+		.version{
+			display:none;
+		}
